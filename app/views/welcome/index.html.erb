@@ -1,0 +1,134 @@
+<div class="row show-grid">
+
+	<div id="leftbar" class="span6">
+		<div id="profile" class="grey">
+			<div id="avatar" class="no_left span2">
+				<%= image_tag "avatar.png", alt: "Avatar", size: "150x150" %>
+			</div>
+			<div id="user_profile" class="no_left span4">
+				<div id="profile_name">Name</div>
+				<div id="profile_address1">Address 1</div>
+				<div id="profile_address2">Address 2</div>
+				<div id="profile_phone">Phone</div>
+				<div id="profile_website">Website</div>
+				<%= link_to "edit", "#", :class =>"right" %>
+			</div>
+		</div><!-- end of #profile -->
+
+		<hr/>
+
+		<div id="account_container" class="grey">
+			<h3>Accounts <span class="right"><%= link_to "+ Add Another","#new_account", :class=>"colorbox" %></span></h3>
+		 	<% for i in 1..3 %>
+				<%= render :partial => 'account', :locals => {:index => i} %>
+			<% end %>
+		</div>
+		<div style="display:none">
+			<div id='new_account' style='padding:10px; background:#fff;'>
+				<%= form_tag "#" do %>
+					<h3>Add New Account</h3>
+					<div>
+						<%= label_tag "username", "Username", :class => "no_left span1" %>
+						<%= text_field_tag "username", nil, :class=>"no_left span4" %>
+					</div>
+					<div>
+						<%= label_tag "password", "Password", :class => "no_left span1" %>
+						<%= text_field_tag "password", nil, :class=>"no_left span4" %>
+					</div>
+					<div>
+						<%= label_tag "password_confirmation", "Confirm Password", :class => "no_left span1" %>
+						<%= text_field_tag "password_confirmation", nil, :class=>"no_left span4" %>
+					</div>
+					<div class="center">
+						<%= submit_tag "Create", :class => "btn btn-large" %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div><!-- end of #leftbar -->
+
+
+	<div id="rightbar" class="span6">
+		<div id="profile_completeness" class="grey">
+			<h3>
+				Profile Completeness:
+				<span class="icon-question-sign right" title="text title" data-content="The text goes here"></span>
+			</h3>
+			<div id = "progress_bar_container">
+				<div id="progress_bar">
+					<div id="completion" style="width:300px;"></div>
+				</div>
+				<div id="progress_percent">80%</div>
+			</div>
+			<br/>
+			<%= form_tag "#", {:style =>"margin-bottom:0px;"} do %>
+				<%= text_area_tag "incomplete_profile", "Field for something to complete the profile", :rows => 2 %>
+			<% end %>
+		</div><!-- end of #profile_completeness -->
+		<hr />
+
+		<div id="person_info" class="grey">
+			<h3>Person Info <span class="right"><%= link_to "+ Add Contact","#", :id=>"add_contact" %></span></h3>
+			<div class="no_left span2">
+				<%= image_tag "avatar.png", alt: "Avatar", size: "100x100" %>
+				<br />
+				<%= link_to "edit", "#" %>
+			</div>
+			<div id = "person_stats" class="no_left span4">
+				<div>Person Stats 1</div>
+				<div>Person Stats 2</div>
+				<div>Person Stats 3</div>
+				<div>Person Stats 4</div>
+				<%= link_to "edit", "#", :class =>"right" %>
+			</div>
+			<div style="clear:both"></div>
+		</div><!-- enf of #person_info -->
+		<hr />
+
+		<div id="skill_info" class="grey">
+			<h3>
+				Skills Info
+				<span class="right"><%= link_to "+ Add Action","#" %></span>
+			</h3>
+			<br/><div><b>Select To Edit</b></div><br/>
+			<div>
+				<input type="checkbox" name="" />
+				<span> Action1 - active</span>
+			</div>
+			<div>
+				<input type="checkbox" name=""/>
+				<span> Action2 - active</span>
+			</div>
+			<div>
+				<input type="checkbox" name=""/>
+				<span> Action3 - active</span>
+			</div>
+			<div>
+				<input type="checkbox" name=""/>
+				<span> Action4 - active</span>
+			</div>
+		</div><!-- enf of #skill_info -->
+		<hr />
+
+		<div id="even_more_skill" class="grey">
+			<h3>
+				Even More Skills
+				<span class="right"><%= link_to "+ Add Skills","#" %></span>
+			</h3>
+			<br/><div><b>Select To Edit</b></div><br/>
+			<div>
+				<input type="checkbox" name="" />
+				<span> Skillset 1</span>
+			</div>
+			<div>
+				<input type="checkbox" name=""/>
+				<span> Skillset 2</span>
+			</div>
+			<div>
+				<input type="checkbox" name=""/>
+				<span> Skillset 3</span>
+			</div>
+		</div><!-- enf of #even_more_skill -->
+	</div><!-- end of #rightbar -->
+
+</div>

@@ -1,0 +1,20 @@
+/*#leftbar img, #rightbar img{border:1px solid}*/
+#user_profile div, #person_stats div{font-size: 125%; line-height: 175%}
+
+#profile, #profile_completeness{min-height: 160px;}
+#progress_bar_container{margin: 10px 0px;}
+#progress_bar{width:375px;background:#adff2f;min-height: 40px;}
+#completion{background:#008000;min-height: 40px;}
+#progress_percent{margin-left: 390px; margin-top: -29px; font-size: 150%}
+#incomplete_profile{width:96%}
+
+.account{padding-top:15px;}
+.account .span1{width:70px;}
+#new_account .span1{width:100px;}
+#new_account h3{text-align: center;margin-bottom: 20px;}
+#new_account input[type="submit"]{padding: 9px 30px;margin-left:-50px;margin-top: 15px;}
+
+#even_more_skill input[type="checkbox"],
+#skill_info input[type="checkbox"],
+#account_container input[type="checkbox"]
+    {margin-right: 5px;}

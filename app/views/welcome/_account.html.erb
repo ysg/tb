@@ -1,0 +1,33 @@
+<div class="account">
+	<h4>
+		<input type="checkbox" name="" />
+		Account <%= index %>
+	</h4>
+	<div class="no_left span4">
+		<div>
+			<label for="username" class="no_left span1">Username</label>
+			<input type="text" name="username" class="no_left span3">
+		</div>
+		<div>
+			<label for="password" class="no_left span1">Password</label>
+			<input type="text" name="password" class="no_left span3">
+		</div>
+		<div>
+			<label for="password_confirmation" class="no_left span1">Confirm Password</label>
+			<input type="text" name="password_confirmation" class="no_left span3">
+		</div>
+		<div>
+			<div class = "no_left span1"></div>
+			<%= link_to "Save", "#", :class => "right" %>
+		</div>
+	</div>
+	<div class="no_left span2">
+		<%= image_tag "avatar.png", alt: "Avatar", size: "100x100" %><br />
+		<%= link_to "edit", "#", :class => "right" %>
+	</div>
+	<div style="clear:both"></div>
+</div>
+
+<% if index != 3 %>
+	<hr />
+<% end %>
