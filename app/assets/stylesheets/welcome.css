@@ -18,3 +18,7 @@
 #skill_info input[type="checkbox"],
 #account_container input[type="checkbox"]
     {margin-right: 5px;}
+
+
+.editable form{margin-bottom: -5px}
+.editable input{width: 80% !important;}
